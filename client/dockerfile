@@ -1,0 +1,6 @@
+FROM python:3.12.1-slim-bookworm
+RUN pip3 install flet requests
+WORKDIR /app
+ADD . /app
+ENTRYPOINT [ "python3" ]
+CMD ["/app/main.py"]
